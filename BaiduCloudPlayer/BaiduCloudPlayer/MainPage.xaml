@@ -8,6 +8,6 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView x:Name="listView"></ListView>
+        <ListView x:Name="listView1"></ListView>
     </Grid>
 </Page>

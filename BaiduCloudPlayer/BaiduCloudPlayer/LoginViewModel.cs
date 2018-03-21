@@ -1,5 +1,7 @@
-﻿using GalaSoft.MvvmLight;
+﻿using CommonServiceLocator;
+using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,11 +43,12 @@ namespace BaiduCloudPlayer
                 {
                     string[] sub = p.Split('=');
                     // Get each parameter
-                    switch (sub[0])
+                    if (sub[0] == "access_token")
                     {
-                        case "access_token":
-                            UserDataStorge.Instance.Access_Token = sub[1];
-                            break;
+                        UserDataStorge.Instance.Access_Token = sub[1];
+                        var navigationService = ServiceLocator.Current.GetInstance<INavigationService>();
+                        navigationService.NavigateTo("MainView");
+                        break;
                     }
                 }
             }

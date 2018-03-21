@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BaiduCloudPlayer
 {
-    class FileListViewModel
+    public class MainViewModel
     {
     }
 }

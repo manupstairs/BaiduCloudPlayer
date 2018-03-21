@@ -7,6 +7,9 @@
     xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
     x:Class="BaiduCloudPlayer.LoginView"
     mc:Ignorable="d">
+    <Page.DataContext>
+        <Binding Path="LoginVM" Source="{StaticResource Locator}"></Binding>
+    </Page.DataContext>
 
     <WebView local:WebViewEx.Uri="{Binding LoginUri, Mode=OneTime}">
 

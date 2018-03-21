@@ -26,8 +26,6 @@ namespace BaiduCloudPlayer
         public LoginView()
         {
             this.InitializeComponent();
-
-            this.DataContext = new LoginViewModel();
         }
     }
 }

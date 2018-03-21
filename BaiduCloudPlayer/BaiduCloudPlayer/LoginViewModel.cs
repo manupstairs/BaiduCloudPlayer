@@ -25,15 +25,6 @@ namespace BaiduCloudPlayer
             }
         }
 
-        //private Uri content;
-
-        //public Uri Content
-        //{
-        //    get { return content; }
-        //    set { Set(ref content, value); }
-        //}
-
-
         public ICommand LoginCommand { get; set; }
 
         public LoginViewModel()
@@ -52,21 +43,9 @@ namespace BaiduCloudPlayer
                     // Get each parameter
                     switch (sub[0])
                     {
-                        //case "access_token":
-                        //    MainWindow.totalData.Access_Token = sub[1];
-                        //    break;
-                        //case "expires_in":
-                        //    MainWindow.totalData.Expires_In = sub[1];
-                        //    break;
-                        //case "session_secret":
-                        //    MainWindow.totalData.Session_Secret = sub[1];
-                        //    break;
-                        //case "session_key":
-                        //    MainWindow.totalData.Session_Key = sub[1];
-                        //    break;
-                        //case "scope":
-                        //    MainWindow.totalData.Scope = sub[1];
-                        //    break;
+                        case "access_token":
+                            UserDataStorge.Instance.Access_Token = sub[1];
+                            break;
                     }
                 }
             }
